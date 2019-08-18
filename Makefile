@@ -7,7 +7,7 @@ PW=neo
 OUTDIR=/data/pipeline2
 #SERVER=http://host.docker.internal:7474
 SERVER=http://kb.p2.virtualflybrain.org
-FILENAME=ontology3.owl
+FILENAME=ontology2.owl
 TESTIRI=https://raw.githubusercontent.com/matentzn/ontologies/master/issue2_neo2owl.owl
 
 docker-build:
