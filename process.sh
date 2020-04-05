@@ -34,6 +34,9 @@ echo '** Exporting the KB (again), bit this time from the local instance **'
 curl -X POST ${KBserverLocal}/db/data/transaction/commit -u ${KBuserLocal}:${KBpasswordLocal} -H 'Content-Type: application/json' -d "@kb-save.json" -o /out/kb2.json
 jq -r '[.results[].data[].row[]][0]' /out/kb2.json > /out/kb2.owl
 
+robot diff --left /out/kb2.owl --right /out/kb.owl -o /out/kb_diff.txt
+
+
 echo '** Running a few test queries and ensure they yield the same results **'
 ls -l ${TESTQUERIES}
 for i in ${TESTQUERIES}/*.json; do

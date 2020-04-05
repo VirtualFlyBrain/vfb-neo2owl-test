@@ -15,7 +15,4 @@ docker-build-no-cache:
 	&& docker tag $(IM):$(VERSION) $(IM):latest
 
 docker-run:
-	#docker run --volume $(OUTDIR):/out --env=KBserver=$(SERVER_LOCAL) --env=KBpassword=$(PW) --env=FILENAME=$(FILENAME_LOCAL) $(IM)
 	docker run --volume $(OUTDIR):/out --volume $(NEODIR):/localneo --env-file ./env.list $(IM)
-	#sh run.sh robot diff --left $(OUTDIR)/$(FILENAME_REMOTE) --right $(OUTDIR)/$(FILENAME_LOCAL) -o $(OUTDIR)/diff_$(FILENAME_LOCAL)_$(FILENAME_REMOTE).txt
-
