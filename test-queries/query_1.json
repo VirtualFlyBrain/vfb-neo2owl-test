@@ -1,0 +1,5 @@
+{
+  "statements" : [ {
+    "statement" : "MATCH (n:Entity {iri: \"http://virtualflybrain.org/reports/VFB_00020341\"}) RETURN n"
+  } ]
+}
