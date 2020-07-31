@@ -16,3 +16,8 @@ docker-build-no-cache:
 
 docker-run:
 	docker run --volume $(OUTDIR):/out --volume $(NEODIR):/localneo --env-file ./env.list $(IM)
+
+q:
+	sh run.sh robot query --use-graphs true --format ttl -i kb.owl --query query.sparql $@.ttl
+	
+	

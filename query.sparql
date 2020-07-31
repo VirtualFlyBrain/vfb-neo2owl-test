@@ -1,0 +1,8 @@
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT { <http://virtualflybrain.org/data/Eichler2017> ?p ?value .
+          } WHERE 
+{
+  <http://virtualflybrain.org/data/Eichler2017> ?p ?value
+}
